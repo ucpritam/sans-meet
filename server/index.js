@@ -20,6 +20,7 @@ app.use(router);
 
 io.on('connect', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
+    if(!name || !room) return
     const { error, user } = addUser({ id: socket.id, name, room });
 
     if(error) return callback(error);
@@ -42,7 +43,7 @@ io.on('connect', (socket) => {
 
     io.to(user.room).emit('message', { user: user.name, text: message });
 
-    callback();
+    // callback();
   });
 
   socket.on('disconnect', () => {
