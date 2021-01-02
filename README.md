@@ -1,5 +1,7 @@
 # Dependencies
-## client (cd client)
+## client
+```cd client```
+
 ```npm install --save cors nodemon express socket.io```
 
 ## server (cd server)
