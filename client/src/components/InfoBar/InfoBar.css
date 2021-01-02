@@ -1,0 +1,23 @@
+.center {
+  text-align: center;
+}
+
+.infoBar {
+    align-items: center;
+    justify-content: space-between;
+    background: #79589f;
+    border-radius: 4px 4px 0 0;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .leftInnerContainer {
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  .onlineIcon {
+    margin-right: 5%;
+  }
