@@ -4,15 +4,17 @@ import Row from "./Row";
 import "./Input.css";
 
 const Input = ({
-  setMessage, //this becomes useless
   sendMessage,
-  message, //this one too
-  data,
-  sendButton
+  data
 }) => {
   const [layout, setLayout] = React.useState(0);
-  const backspaceHist = [];
+  const [message, setMessage] = React.useState('');
+  const [backspaceHist, setBackspaceHist] = React.useState([""]);
   const textRef = React.useRef(null);
+
+  // React.useEffect(()=>{
+  //   setMessage(backspaceHist[0])
+  // }, [backspaceHist])
 
   const Rows = [
     [
@@ -129,28 +131,24 @@ const Input = ({
     let l;
     if (mainLetter === "Backspace" || mainLetter === "⌫") {
       if (backspaceHist.length > 0) {
-        backspaceHist.shift();
-        textRef.current.value =
-          backspaceHist.length > 0 ? backspaceHist[0] : "";
+        
+        setBackspaceHist(bh => { if (bh.length > 1) { bh.shift(); setMessage(bh[0]); return bh } else { setMessage(bh[0]); return bh};})
+        setMessage(backspaceHist[0])
+        // textRef.current.value =
+        //   backspaceHist.length > 0 ? backspaceHist[0] : "";
+        return
       }
     } else if (mainLetter === "Space") {
       l = textRef.current.value.concat(" ");
-      textRef.current.value = l;
-      if (l !== backspaceHist[0]) backspaceHist.unshift(l);
     } else if (mainLetter === "Tab") {
       l = textRef.current.value.concat("    ");
-      textRef.current.value = l;
-      if (l !== backspaceHist[0]) backspaceHist.unshift(l);
     } else if (mainLetter === "Enter" || mainLetter === "⏎") {
       l = textRef.current.value.concat("\n");
-      textRef.current.value = l;
-      if (l !== backspaceHist[0]) backspaceHist.unshift(l);
     } else if (!["Alt", "Shift", "Caps", "⇧"].includes(mainLetter)) {
       l = textRef.current.value.concat(mainLetter);
-      textRef.current.value = l;
-      if (l !== backspaceHist[0]) backspaceHist.unshift(l);
     }
-    textRef.current.focus();
+    setMessage(l);
+    setBackspaceHist(bh => { bh.unshift(l); console.log(bh); return bh })
 
     // try {
     //   let setpos = document.createRange();
@@ -169,25 +167,26 @@ const Input = ({
   const rows = data ? data : Rows;
 
   const handleSendMessage = () => {
-    sendMessage(textRef.current.value) //this way u can get the input value and do whatever the f u want 
-    textRef.current.value = ''
+    sendMessage(message)
+    setMessage('')
     backspaceHist.splice(0, backspaceHist.length)
+    textRef.current.focus();
   }
   
   return (
-    <form className="form">
+    <div className="form">
       <input
         ref={textRef}
         className="input"
         type="text"
         placeholder="Type a message..."
         value={message}
-        onChange={({ target: { value } }) => setMessage(value)} /* onChnage event does not get triggered when using the virtual keyboard, so u cant do this */
+        onChange={({ target: { value } }) => setMessage(value)}
         onKeyPress={(event) =>
           event.key === "Enter" ? handleSendMessage() : null
         }
       />
-      <button className="sendButton" onClick={(e) =>{e.preventDefault();handleSendMessage()}}>
+      <button className="sendButton" onMouseUp={() => handleSendMessage()}>
         <i className="fa fa-paper-plane" aria-hidden="true">Send</i>
       </button>
 
@@ -220,7 +219,7 @@ const Input = ({
           </div>
         </div>
       </div>
-    </form>
+    </div>
   );
 };
 
