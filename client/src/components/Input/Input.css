@@ -1,5 +1,6 @@
 .form {
     border-top: 2px solid #D3D3D3;
+    border-bottom: 2px solid #D3D3D3;
     height: auto;
   }
   
@@ -25,6 +26,10 @@
     border: none;
     width: 15%;
     cursor: pointer;
+  }
+  
+  .send-button > img {
+    height: 25px;
   }
 
   .fa {

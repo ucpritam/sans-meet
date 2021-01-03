@@ -2,10 +2,11 @@ html, body {
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
+    background-color: #79589f;
   }
   
   #root {
-    height: 100vh;
+    height: 0vh;
   }
   
   * {
@@ -13,19 +14,22 @@ html, body {
   }
   
   .joinOuterContainer {
-    display: flex;
     justify-content: center;
     text-align: center;
-    height: 100vh;
     align-items: center;
-    background-color: #1A1A1D;
+    background-color: #79589f;
   }
   
   .joinInnerContainer {
-    width: 20%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 50px;
+    background-color: white;
+    width: 25%;
   }
   
   .joinInput {
+    border: 1px solid black;
     border-radius: 0;
     padding: 15px 20px;
     width: 100%;
@@ -33,9 +37,18 @@ html, body {
   
   .heading {
     color: white;
-    font-size: 2.5em;
+    font-size: 2.8em;
     padding-bottom: 10px;
-    border-bottom: 2px solid white;
+    margin-top: 200px;
+    margin-bottom: 50px;
+  }
+
+  .credit {
+    color: white;
+    font-size: 2em;
+    padding-bottom: 10px;
+    margin-top: 200px;
+    margin-bottom: 50px;
   }
   
   .button {
@@ -56,6 +69,10 @@ html, body {
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
+    .heading {
+      font-size: 1.8em;
+    }
+
     .joinOuterContainer {
       height: 100%;
     }
@@ -72,8 +89,10 @@ html, body {
   }
   
 .credit {
-  text-align: center;
-  color: white;
-  position: fixed;
-  bottom: 0;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 0;
+    bottom: 20px;
 }

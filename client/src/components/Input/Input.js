@@ -1,5 +1,6 @@
 import React from "react";
 import Row from "./Row";
+import 'font-awesome/css/font-awesome.min.css';
 
 import "./Input.css";
 
@@ -187,7 +188,7 @@ const Input = ({
         }
       />
       <button className="sendButton" onMouseUp={() => handleSendMessage()}>
-        <i className="fa fa-paper-plane" aria-hidden="true">Send</i>
+        <i className="fa fa-paper-plane" aria-hidden="true"></i>
       </button>
 
       <div className="keyboard-container" onClick={(e) => e.preventDefault()}>

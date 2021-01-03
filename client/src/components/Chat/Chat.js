@@ -6,8 +6,8 @@ import TextContainer from '../TextContainer/TextContainer';
 import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
-// import Quiz from '../Quiz/Quiz';
-// import Tutorials from '../Tutorials/Tutorials';
+import Quiz from '../Quiz/Quiz';
+import Tutorials from '../Tutorials/Tutorials';
 
 import './Chat.css';
 
@@ -59,10 +59,11 @@ const Chat = ({ location }) => {
       <div className="container">
           <InfoBar room={room} />
           <Messages messages={messages} name={name} />
-          <Input sendMessage={sendMessage} />          
-          {/* <Quiz /> */}
+          <Input sendMessage={sendMessage} />    
+          <Tutorials /> 
+          <Quiz />
       </div>    
-      {/* <Tutorials />  */}
+      
     </div>
   );
 }
