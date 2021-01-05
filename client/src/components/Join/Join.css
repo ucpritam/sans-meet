@@ -1,98 +1,93 @@
-html, body {
-    font-family: 'Roboto', sans-serif;
-    padding: 0;
-    margin: 0;
-    background-color: #79589f;
-  }
-  
-  #root {
-    height: 0vh;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .joinOuterContainer {
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: #79589f;
-  }
-  
-  .joinInnerContainer {
-    margin: auto;
-    border-radius: 5px;
-    padding: 50px;
-    background-color: white;
-    width: 25%;
-  }
-  
-  .joinInput {
-    border: 1px solid black;
-    border-radius: 0;
-    padding: 15px 20px;
-    width: 100%;
-  }
-  
-  .heading {
-    color: white;
-    font-size: 2.8em;
-    padding-bottom: 10px;
-    margin-top: 200px;
-    margin-bottom: 50px;
-  }
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #79589f;
+}
 
-  .credit {
-    color: white;
-    font-size: 2em;
-    padding-bottom: 10px;
-    margin-top: 200px;
-    margin-bottom: 50px;
-  }
-  
-  .button {
-      color: #fff !important;
-      font-weight: bolder;
-      text-transform: uppercase;
-      text-decoration: none;
-      background: #79589f;
-      padding: 20px;
-      display: inline-block;
-      border: none;
-      width: 100%;
-      cursor: pointer;
-  }
-  
-  .mt-20 {
-    margin-top: 20px;
-  }
-  
-  @media (min-width: 320px) and (max-width: 480px) {
-    .heading {
-      font-size: 1.8em;
-    }
+#root {
+  height: 0vh;
+}
 
-    .joinOuterContainer {
-      height: 100%;
-    }
-  
-    .joinInnerContainer {
-      width: 90%;
-    }
-  
-  
-  }
-  
-  button:focus {
-    outline: 0;
-  }
-  
+* {
+  box-sizing: border-box;
+}
+
+.joinOuterContainer {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #79589f;
+}
+
+.joinInnerContainer {
+  margin: auto;
+  border-radius: 5px;
+  padding: 50px;
+  background-color: white;
+  width: 25%;
+}
+
+.joinInput {
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.heading {
+  color: white;
+  font-size: 2.8em;
+  padding-bottom: 10px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
 .credit {
-    font-size: 1em;
-    text-align: center;
-    color: white;
-    position: relative;
-    padding: 0;
-    bottom: 20px;
+  color: white;
+  font-size: 2em;
+  padding-bottom: 10px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.button {
+  color: #fff !important;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #79589f;
+  padding: 20px;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .joinOuterContainer {
+    height: 100%;
+  }
+
+  .joinInnerContainer {
+    width: 90%;
+  }
+}
+
+button:focus {
+  outline: 0;
+}
+
+.credit {
+  font-size: 1em;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 0;
+  bottom: 20px;
 }

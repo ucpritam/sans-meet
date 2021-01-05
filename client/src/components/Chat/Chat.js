@@ -11,7 +11,7 @@ import Tutorials from '../Tutorials/Tutorials';
 
 import './Chat.css';
 
-const ENDPOINT = 'localhost:5000';
+const ENDPOINT = 'https://sansmeet.herokuapp.com/';
 
 let socket;
 

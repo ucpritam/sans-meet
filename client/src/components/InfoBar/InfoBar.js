@@ -5,7 +5,7 @@ import './InfoBar.css';
 const InfoBar = () => (
   <div className="infoBar">
     <div className="leftInnerContainer">
-      <h3>Live chat in Sanskrit</h3>
+      <h3>Live chat in संस्कृतम्</h3>
     </div>
   </div>
 );

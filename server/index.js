@@ -30,7 +30,7 @@ io.on('connect', (socket) => {
     var user_name = user.name.split(" ")[0];
     var firstName = user_name.charAt(0).toUpperCase() + user_name.slice(1);
 
-    socket.emit('message', { user: 'admin', text: `${firstName}, welcome to Samskritam.`});
+    socket.emit('message', { user: 'admin', text: `${firstName}, welcome to SansMeet. If you are using mobile please open Hindi keyboard.`});
     socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${firstName} has joined!` });
 
     io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });

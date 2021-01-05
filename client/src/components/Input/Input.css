@@ -1,39 +1,41 @@
 .form {
-    border-top: 2px solid #D3D3D3;
-    border-bottom: 2px solid #D3D3D3;
-    height: auto;
-  }
-  
-  .input {
-    border: none;
-    border-radius: 0;
-    padding: 10px;
-    width: 85%;
-    font-size: 1em;
-  }
-  
-  input:focus, textarea:focus, select:focus{
-    outline: none;
-  }
-  
-  .sendButton {
-    color: #79589f !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: transparent;
-    padding: 10px;
-    display: inline-block;
-    border: none;
-    width: 15%;
-    cursor: pointer;
-  }
-  
-  .send-button > img {
-    height: 25px;
-  }
+  border-top: 2px solid #d3d3d3;
+  border-bottom: 2px solid #d3d3d3;
+  height: auto;
+}
 
-  .fa {
-    font-size: 20px;
+.input {
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  width: 85%;
+  font-size: 1em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.sendButton {
+  color: #79589f !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  padding: 10px;
+  display: inline-block;
+  border: none;
+  width: 15%;
+  cursor: pointer;
+}
+
+.send-button > img {
+  height: 25px;
+}
+
+.fa {
+  font-size: 20px;
 }
 
 /* .keyboard-container {

@@ -1,27 +1,31 @@
 .App {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 45%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45%;
+  margin-top: 15px;
 }
 
-.sliderimg{
+.sliderimg {
+  border-radius: 10px;
   width: 100%;
-  height: 210px;
+  height: 230px;
+  transition: transform 0.2s;
 }
-.alice-carousel__prev-btn {
-    display: none;
+.sliderimg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1024px) {
-    .App {
-        position: relative;
-        top: 0;
-        right: 0;
-        width: 100%;
-    }
-    .sliderimg{
-        height: auto;
-      }
+  .App {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  .sliderimg {
+    height: auto;
+    padding: 5px;
+  }
 }
-

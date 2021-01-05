@@ -189,6 +189,7 @@ body {
   .question-container {
     width: 100vw;
     height: 500px;
+    bottom: 50px;
   }
   .question-container .question .options {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

@@ -11,8 +11,8 @@ const Tutorials = () => {
   return (
     <div className="App">
      <AliceCarousel autoPlay autoPlayInterval="5000">
-      <img src={image1} className="sliderimg" alt=""/>
       <img src={image2} className="sliderimg" alt=""/>
+      <img src={image1} className="sliderimg" alt=""/>
       <img src={image3} className="sliderimg" alt=""/>
       <img src={image4} className="sliderimg" alt=""/>
     </AliceCarousel>
