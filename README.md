@@ -1,3 +1,5 @@
+![plot](../SansMeet/client/build/sansmeet.png)
+
 # Dependencies
 ## server
 ```cd server```
