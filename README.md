@@ -1,4 +1,4 @@
-![Screenshot](sansmeet.png)
+![Screenshot](./assets/sansmeet.png)
 
 # Dependencies
 ## server
