@@ -1,4 +1,4 @@
-![Screenshot](../../../Projects/Yantra/SansMeet/client/src/icons/sansmeet.png)
+![Screenshot](sansmeet.png)
 
 # Dependencies
 ## server
