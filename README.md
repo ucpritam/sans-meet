@@ -1,4 +1,4 @@
-![plot](../SansMeet/client/build/sansmeet.png)
+![alt text](https://github.com/[ucpritam]/[sans-meet]/blob/[main]/../../../../../../client/build/sansmeet.png?raw=true)
 
 # Dependencies
 ## server
